@@ -1,5 +1,5 @@
 // Global JS
-
+document.addEventListener("DOMContentLoaded", function() {
 (function() {
   "use strict";
 
@@ -13,7 +13,7 @@
     headerToggleBtn.classList.toggle('bi-list');
     headerToggleBtn.classList.toggle('bi-x');
   }
-  headerToggleBtn.addEventListener('click', headerToggle);
+  headerToggleBtn.addEventListener('click', headerToggle); 
 
   /**
    * Hide mobile nav on same-page/hash links
@@ -221,3 +221,5 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+// console.log(headerToggleBtn);
+});

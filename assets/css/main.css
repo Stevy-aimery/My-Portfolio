@@ -625,12 +625,13 @@ section,
   height: 27px;
 }
 .my-ul-icons{
-  display: flex;
+  display: flow-root;
   gap: 13px;
   list-style-type: none;
 }
 .section-title ul{
   display: flex;
+  flex-wrap: wrap;
   gap: 13px;
   list-style-type: none;
   }
