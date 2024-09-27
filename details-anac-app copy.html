@@ -33,45 +33,33 @@
 
 </head>
 
-<body class="portfolio-details-page">
+<body class="portfolio-details-page"> 
 
- <!-- Header section -->
- <header id="header" class="header dark-background d-flex flex-column">
-  <i class="header-toggle d-xl-none bi bi-list"></i>
-
-  <div class="profile-img">
-    <img src="assets/img/Photo-Profil.png" alt="" class="img-fluid rounded-circle">
-  </div>
-
-  <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-    <h1 class="sitename">Stevy KOUMBA</h1>
-  </a>
-
-  <div class="social-links text-center">
-    <a href="https://www.linkedin.com/in/st%C3%A9vy-koumba-moukagni/" target="_blank" class="linkedin"><i
-        class="bi bi-linkedin"></i></a>
-    <a href="https://github.com/Stevy-aimery" target="_blank" class="github"><i class="bi bi-github"></i></a>
-    <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-    <!-- <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-    <a href="#" class="instagram"><i class="bi bi-instagram"></i></a> -->
-  </div>
-
-  <nav id="navmenu" class="navmenu">
-    <ul>
-      <li><a href="index.html#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-      <li><a href="index.html#about"><i class="bi bi-person navicon"></i> About</a></li>
-      <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-      <li><a href="index.html#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-      <li><a href="index.html#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
-      <li><a href="index.html#testimonials"><i class="bi bi-chat-left-heart-fill navicon"></i> Testimonials</a></li>
-      <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
-    </ul> 
-  </nav>
-
+<header id="importedContentHeader" id="header" class="header dark-background d-flex flex-column">  
+  <!-- <i class="header-toggle d-xl-none bi bi-list"></i> -->
+<!-- Script import the Header part -->
+<script>
+  // Utiliser fetch pour récupérer le contenu de file2.html
+  fetch('header.html')
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Network response was not ok');
+          }
+          return response.text();
+      })
+      .then(data => {
+          // Insérer le contenu récupéré dans le div avec l'ID 'importedContent'
+          document.getElementById('importedContentHeader').innerHTML = data;
+      })
+      .catch(error => {
+          console.error('There was a problem with the fetch operation:', error);
+      });
+</script>
 </header>
-<!-- End Header section -->
 
-  <main class="main"> 
+<!-- End Script import the Header part -->
+
+  <main class="main">
 
     <!-- Page Title -->
     <div class="page-title dark-background">
@@ -80,7 +68,7 @@
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Citascamar App</li>
+            <li class="current">ANAC App</li>
           </ol>
         </nav>
       </div>
@@ -115,21 +103,37 @@
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/citas2.png" alt="">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/citascam3-removebg-preview.png" alt="">
+                  <img src="assets/img/portfolio/app-1.jpg" alt="">
                 </div>
                 <!-- <div class="swiper-slide">
-                  <img src="assets/img/portfolio/citascam3-removebg-preview (1).png" alt="">
+                  <img src="assets/img/portfolio/logo_Anac.jpeg" alt="">
                 </div> -->
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/citas1.png" alt="">
+                  <img src="assets/img/portfolio/logo_anac.png" alt="">
                 </div>
                 
 
               </div>
               <div class="swiper-pagination"></div>
+            </div>
+            <div class="row gy-4 mt-5">
+              <div class="col-lg-12 portfolio-description" data-aos="fade-up" data-aos-delay="300">
+                  <h2>Technological stack used</h2>
+                  <p class="text-black">
+                    The technology stack used to implement this project are:                
+                  </p>
+                  <ul class="fst-italic my-ul-icons">
+                    <li>HTML5 <img src="assets/img/icons/html5.png" alt="" class="my-icons"></li>
+                    <li>CSS3 <img src="assets/img/icons/css3.png" alt="" class="my-icons"></li>
+                    <li>JavaScript/JQuery/Ajax <img src="assets/img/icons/js.png" alt="" class="my-icons"></li>
+                    <li>Bootstrap <img src="assets/img/icons/bootstrapp.png" alt="" class="my-icons"></li>
+                    <li>PHP  <img src="assets/img/icons/php.png" alt="" class="big-icon"></li>
+                    <li>SQL <img src="assets/img/icons/sql.png" alt="" class="my-icons"></li>
+                    <li>MySQL <img src="assets/img/icons/MySQL.png" alt="" class="big-icon"></li>
+                  </ul>
+                  
+              </div>
+    
             </div>
           </div>
 
@@ -137,37 +141,43 @@
             <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
               <h3>Project informations</h3>
               <ul>
-                <li><strong>Category</strong>: eCommerce website</li>
-                <li><strong>Client</strong>: Citascamar</li>
-                <li><strong>Project start date</strong>: 3 June, 2022</li>
-                <li><strong>Project end date</strong>: 29 June, 2022</li>
-                <li><strong>Project URL</strong>: <a href="https://citascasamar.com/" target="_blank">www.citascasamar.com</a></li>
+                <li><strong>Category</strong>: Web App</li>
+                <li><strong>Client</strong>: ANAC Gabon</li>
+                <li><strong>Project start date</strong>: 05 March, 2022</li>
+                <li><strong>Project end date</strong>: 15 July, 2022</li>
+                <li><strong>Project URL</strong>: <a href="https://portail-anacgabon.com/E-ADNA/FRONTEND/fr/index.php" target="_blank">www.portail-anacgabon.com</a></li>
               </ul>
             </div>
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>Citascamar</h2>
+              <h2>E-ADNA Platform</h2>
               <p class="texte-descrip-projet">
-                Citascamar is an e-commerce site dedicated to the sale of clothing and accessories for women, men and children.              </p>
+                Web application for generating and editing air traffic documents.
+                This project therefore consists of setting up an online platform that will allow the various applicants to make requests for authorization to operate air transport, via their accounts for the various operators with which they collaborate. This application will be known as <strong>"E-ADNA"</strong>.
+              </p>
             </div>
           </div>
 
         </div>
-        <div class="row gy-4">          
+        <!-- <div class="row gy-4">          
 
           <div class="col-lg-12 portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>Technological stack used</h2> 
+              <h2>STAKS USE</h2>
               <p class="text-black">
                 The technology stack used to implement this project are:                
               </p>
               <ul class="fst-italic my-ul-icons">
-                <li>WordPress <img src="assets/img/icons/wordPress.png" alt="" class="my-icons"></li>
-                <li>WooCommerce <img src="assets/img/icons/wooCommerce.png" alt="" class="big-icon"></li>                
-                <!-- <li>MySQL <img src="assets/img/icons/MySQL.png" alt="" class="big-icon"></li> -->
+                <li>HTML5 <img src="assets/img/icons/html5.png" alt="" class="my-icons"></li>
+                <li>CSS3 <img src="assets/img/icons/css3.png" alt="" class="my-icons"></li>
+                <li>JavaScript/JQuery/Ajax <img src="assets/img/icons/js.png" alt="" class="my-icons"></li>
+                <li>Bootstrap <img src="assets/img/icons/bootstrapp.png" alt="" class="my-icons"></li>
+                <li>PHP  <img src="assets/img/icons/php.png" alt="" class="big-icon"></li>
+                <li>SQL <img src="assets/img/icons/sql.png" alt="" class="my-icons"></li>
+                <li>MySQL <img src="assets/img/icons/MySQL.png" alt="" class="big-icon"></li>
               </ul>
               
           </div>
 
-        </div>
+        </div> -->
 
       </div>
 

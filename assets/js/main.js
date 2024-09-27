@@ -1,27 +1,19 @@
-// Global JS
-
-// Global JS 
-
 (function() {
   "use strict";
 
-  document.addEventListener("DOMContentLoaded", function() {
-    const headerToggleBtn = document.querySelector('.header-toggle');
+  /**
+   * Header toggle
+   */
+  const headerToggleBtn = document.querySelector('.header-toggle');
 
-    // Check if headerToggleBtn is found
-    if (!headerToggleBtn) {
-      console.error('header-toggle button not found!');
-      return; // Exit if the button is not found
-    }
+  function headerToggle() {
+    document.querySelector('#header').classList.toggle('header-show');
+    headerToggleBtn.classList.toggle('bi-list');
+    headerToggleBtn.classList.toggle('bi-x');
+  }
+  headerToggleBtn.addEventListener('click', headerToggle); 
 
-    function headerToggle() {
-      document.querySelector('#header').classList.toggle('header-show');
-      headerToggleBtn.classList.toggle('bi-list');
-      headerToggleBtn.classList.toggle('bi-x');
-    }
-    headerToggleBtn.addEventListener('click', headerToggle);
-
-     /**
+  /**
    * Hide mobile nav on same-page/hash links
    */
   document.querySelectorAll('#navmenu a').forEach(navmenu => {
@@ -225,6 +217,5 @@
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
-  });
 
 })();
