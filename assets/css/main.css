@@ -791,7 +791,7 @@ section,
   border: 2px solid var(--accent-color);
 }
 
-.my-a {
+/* .my-a {
   color: var(--contrast-color);
   background: var(--accent-color);
   border: 0;
@@ -802,7 +802,7 @@ section,
 
 .my-a:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 25%);
-}
+} */
 
 /*--------------------------------------------------------------
 # Portfolio Section
