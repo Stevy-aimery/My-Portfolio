@@ -4,9 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Porfolio : Stevy-Aimery</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; object-src 'none'; style-src 'self';"> -->
+
+  <title>Porfolio : Stevy-Aimery</title>
 
   <!-- Favicons -->
   <link href="assets/img/icons/fav-icon1Blue.png" rel="icon">
@@ -835,7 +837,7 @@
           <div class="col-lg-5">
 
             <div class="info-wrap">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
                   <h3>Address</h3>
@@ -859,7 +861,7 @@
                 </div>
               </div><!-- End Info Item -->
 
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
                   <h3>Send me an email</h3>
@@ -875,9 +877,9 @@
           </div>
 
           <div class="col-lg-7">
-            <form action="https://getform.io/f/amdpvxwb" method="post" class="php-email-form" data-aos="fade-up"
-              data-aos-delay="200">
-            <!-- <form action="forms/myConctact.php" method="post" class="php-email-form" data-aos="fade-up"
+            <form action="https://formspree.io/f/xvgpebop" method="post"  id="my-form" class="php-email-form" data-aos="fade-up"
+              data-aos-delay="300">
+            <!-- <form action="https://formspree.io/f/xvgpebop" method="post" class="php-email-form" data-aos="fade-up"
               data-aos-delay="200"> -->
               <div class="row gy-4">
 
@@ -888,7 +890,7 @@
 
                 <div class="col-md-6">
                   <label for="email-field" class="pb-2">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required="">
+                  <input type="email" class="form-control" name="email" id="email-field" placeholder="example@gmail.com" required="">
                 </div>
 
                 <div class="col-md-12">
@@ -907,10 +909,12 @@
 
                 <div class="col-md-12 text-center">
                   <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <div class="error-message text-center"></div>
+                  <div class="sent-message text-center"></div>
 
+                  <p id="my-form-status"></p>
                   <button type="submit">Send Message</button>
+
                 </div>
 
               </div>
@@ -951,7 +955,6 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -962,7 +965,10 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Main JS File -->
+  <script src="forms/validationForm.js"></script>
   <script src="assets/js/main.js"></script>
+  <!-- Place this script at the end of the body tag -->
+
 
 </body>
 

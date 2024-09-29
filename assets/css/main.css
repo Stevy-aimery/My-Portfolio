@@ -87,6 +87,15 @@ h6 {
   font-weight: 600;
 }
 
+/* #my-form-status {
+  display: none;
+  color: #ffffff;
+  background: #059652;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 24px;
+  font-weight: 600;
+} */
 .php-email-form .sent-message {
   display: none;
   color: #ffffff;
