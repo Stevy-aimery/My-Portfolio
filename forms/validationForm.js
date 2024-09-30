@@ -27,7 +27,7 @@ async function handleSubmit(event) {
         // Hide the success message after 20 seconds
         setTimeout(() => {
           thisForm.querySelector(".sent-message").classList.remove("d-block");
-        }, 6000); // 20 seconds in milliseconds
+        }, 7000); // 20 seconds in milliseconds
 
       } else {
         response.json().then((data) => {
@@ -55,6 +55,6 @@ function displayError(thisForm, error) {
   thisForm.querySelector(".error-message").classList.add("d-block");
   setTimeout(() => {
     thisForm.querySelector(".error-message").classList.remove("d-block");
-  }, 8000);
+  }, 9000);
   form.reset();
 }
