@@ -1,0 +1,8 @@
+
+  #google_translate_element{  
+    text-align: center;
+    margin-top: 14px;
+    padding: 14px 10px;
+    background-color: var(--accent-color);
+    background-color: var(--nav-dropdown-background-color);  
+  }
