@@ -1131,6 +1131,11 @@ section,
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 
+.custom-a-btn {
+  border-radius: 50px;
+  padding: 10px 20px;
+}
+
 @media (max-width: 575px) {
   .contact .php-email-form {
     padding: 20px;
