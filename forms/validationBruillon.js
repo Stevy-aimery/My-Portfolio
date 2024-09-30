@@ -1,6 +1,6 @@
 var form = document.getElementById("my-form");
 
-async function handleSubmit(event) {
+async function handleSubmit(event) { 
   event.preventDefault();
 
   let thisForm = this;
