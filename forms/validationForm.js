@@ -36,7 +36,7 @@ async function handleSubmit(event) {
               .map((error) => error["message"])
               .join(", ");
           } else {
-            status.innerHTML = "Oops! There was a problem submitting your form";
+              thisForm.querySelector(".error-message").innerHTML = "Oops! There was a problem submitting your form!"+error+"Please try again";
           }
         });
       }
@@ -51,7 +51,6 @@ form.addEventListener("submit", handleSubmit);
 function displayError(thisForm, error) {
   thisForm.querySelector(".loading").classList.remove("d-block");
   thisForm.querySelector(".error-message").innerHTML = "Invalid input. Please correct the fields and try again.";
-//   thisForm.querySelector(".error-message").innerHTML = "Please fill in the fields correctly!"+error;
   thisForm.querySelector(".error-message").classList.add("d-block");
   setTimeout(() => {
     thisForm.querySelector(".error-message").classList.remove("d-block");
