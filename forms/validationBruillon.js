@@ -50,7 +50,7 @@ form.addEventListener("submit", handleSubmit);
 
 function displayError(thisForm, error) {
   thisForm.querySelector(".loading").classList.remove("d-block");
-  thisForm.querySelector(".error-message").innerHTML = "Please fill in the fields correctly!";
+  thisForm.querySelector(".error-message").innerHTML = "Invalid input. Please correct the fields and try again.";
 //   thisForm.querySelector(".error-message").innerHTML = "Please fill in the fields correctly!"+error;
   thisForm.querySelector(".error-message").classList.add("d-block");
   setTimeout(() => {

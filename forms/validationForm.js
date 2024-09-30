@@ -27,7 +27,7 @@ async function handleSubmit(event) {
         // Hide the success message after 20 seconds
         setTimeout(() => {
           thisForm.querySelector(".sent-message").classList.remove("d-block");
-        }, 5000); // 20 seconds in milliseconds
+        }, 6000); // 20 seconds in milliseconds
 
       } else {
         response.json().then((data) => {
@@ -50,11 +50,11 @@ form.addEventListener("submit", handleSubmit);
 
 function displayError(thisForm, error) {
   thisForm.querySelector(".loading").classList.remove("d-block");
-  thisForm.querySelector(".error-message").innerHTML = "Please fill in the fields correctly!";
+  thisForm.querySelector(".error-message").innerHTML = "Invalid input. Please correct the fields and try again.";
 //   thisForm.querySelector(".error-message").innerHTML = "Please fill in the fields correctly!"+error;
   thisForm.querySelector(".error-message").classList.add("d-block");
   setTimeout(() => {
     thisForm.querySelector(".error-message").classList.remove("d-block");
-  }, 6000);
+  }, 8000);
   form.reset();
 }
